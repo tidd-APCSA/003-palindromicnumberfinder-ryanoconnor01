@@ -20,14 +20,16 @@ public class PalindromicNumberFinder {
           break;
         }
       }
-      return searchNum;
+      return searchNum-num;
+      //supposed to return 110 - the miles you have to go until you get to the next pa;endromic num?
     }
 
     // this is a helper method for searchForPalindromicNum. It's purpose is to test if a number is actually a palindrome
     public boolean testPalindromicNum(int num){
-        if (number.equals(reverse)) {
+      Integer reverseInt = Integer.valueOf(reverseNum(num));
+      if (reverseInt.equals(num)) {
           return true;
-        }
+      }
       else{
         return false;
       }
